@@ -8,7 +8,7 @@ export class IMDB extends BasePage {
 menuButton: By = By.xpath('(//div[@class="ipc-button__text"])[1]')
 movies250: By = By.xpath('(//span[@class="ipc-list-item__text"])[3]')
 tv250: By = By.xpath('(//span[@class="ipc-list-item__text"])[13]')
-searchBar: By = By.xpath('//input[@class="imdb-header-search__input _3gDVKsXm3b_VAMhhSw1haV react-autosuggest__input"]')
+searchBar: By = By.xpath('//input[@type="text"]')
 searchFilter: By = By.xpath('(//div[@class="ipc-button__text"])[2]')
 filterTVEpisodes: By = By.xpath('//span[text()="TV Episodes"]')
 moviePageFirstActor: By = By.xpath('(//a[@class="sc-11eed019-1 jFeBIw"])[1]')

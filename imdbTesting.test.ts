@@ -7,6 +7,7 @@ const imdb = new IMDB;
 test("Search Bar and Search Filter", async () => {
     await imdb.navigate();
     await imdb.driver.manage().window().maximize();
+    await imdb.click(imdb.searchBar);
     await imdb.search("Iron Man");
     await imdb.click(imdb.searchIronMan);
     expect(await imdb.movieTitleResults()).toContain("Iron Man");
@@ -75,6 +76,4 @@ test("Menu and Top 250 Pages", async () => {
     expect(await imdb.topTwoFiftyResults()).toContain("Daredevil");
     expect(await imdb.topTwoFiftyResults()).toContain("The Punisher");
     await imdb.driver.quit()
-})
-    
-    
+})    
